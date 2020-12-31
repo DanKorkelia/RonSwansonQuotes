@@ -46,7 +46,7 @@ Website: [https://ramdankorkelia.com](https://ramdankorkelia.com)
 
 LinkedIn: [https://www.linkedin.com/in/ramdankorkelia/](https://www.linkedin.com/in/ramdankorkelia/)
 
-Project Link: [https://github.com/DanKorkelia/RonSwansonQuotesApp](https://github.com/DanKorkelia/RonSwansonQuotesApp)
+Project Link: [https://github.com/DanKorkelia/RonSwansonQuotes](https://github.com/DanKorkelia/RonSwansonQuotes)
 
 
 ## Acknowledgements
