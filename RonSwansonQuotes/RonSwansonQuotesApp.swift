@@ -2,16 +2,19 @@
 //  RonSwansonQuotesApp.swift
 //  RonSwansonQuotes
 //
-//  Created by Dan Korkelia on 17/11/2020.
+//  Created by Dan Korkelia on 30/12/2020.
 //
 
 import SwiftUI
 
 @main
 struct RonSwansonQuotesApp: App {
+    let dataModel = RandomQuotesViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabBarView()
+                .environmentObject(dataModel)
         }
     }
 }

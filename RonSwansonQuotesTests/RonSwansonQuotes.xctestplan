@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "48BA8311-3115-472B-9212-69D78832D840",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RonSwansonQuotes.xcodeproj",
+      "identifier" : "5834E4DE2563E06B003276CE",
+      "name" : "RonSwansonQuotes"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:RonSwansonQuotes.xcodeproj",
+        "identifier" : "5834E4EF2563E06C003276CE",
+        "name" : "RonSwansonQuotesTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:RonSwansonQuotes.xcodeproj",
+        "identifier" : "5834E4FA2563E06C003276CE",
+        "name" : "RonSwansonQuotesUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
