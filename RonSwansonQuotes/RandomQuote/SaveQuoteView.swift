@@ -18,7 +18,10 @@ struct SaveQuoteView: View {
             Image(systemName: "heart")
                 .font(.title)
                 .padding()
-        }.accessibilityHint("A new quote will be shown")
+        }
+        .accessibilityIdentifier("save_quote")
+        .accessibilityHint("A new quote will be shown")
+        
     }
 }
 

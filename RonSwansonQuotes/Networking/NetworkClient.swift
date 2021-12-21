@@ -25,14 +25,10 @@ struct NetworkClient: NetworkClientProtocol {
         
         let task = urlSession.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
             
-            guard let response = response as? HTTPURLResponse else {
-                DispatchQueue.main.async {
-                    completion(nil, .noResponse)
-                }
-                return
-            }
-            
-            guard response.statusCode == 200 else {
+            guard
+                let response = response as? HTTPURLResponse,
+                response.statusCode == 200
+            else {
                 DispatchQueue.main.async {
                     completion(nil, .invalid)
                 }
@@ -45,5 +41,20 @@ struct NetworkClient: NetworkClientProtocol {
         }
         
         task.resume()
+    }
+    
+    func requestAsync(_ payload: NetworkRequest) async throws -> Data {
+        let urlSession = URLSession(configuration: sessionConfiguration)
+        let request = URLRequest(url: payload.url, cachePolicy: .useProtocolCachePolicy)
+        let (data, response) = try await urlSession.data(for: request)
+
+        guard
+            let response = response as? HTTPURLResponse,
+            response.statusCode == 200
+        else {
+            throw NetworkError.invalid
+        }
+
+        return data
     }
 }

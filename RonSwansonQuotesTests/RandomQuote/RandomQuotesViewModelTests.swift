@@ -15,6 +15,7 @@ final class RandomQuotesViewModelTests: XCTestCase {
     private var mockUserDefaults: UserDefaults!
     
     override func setUp() {
+        super.setUp()
         mockUserDefaults = UserDefaults(suiteName: "RandomQuotesViewModelTests")!
         mockDataProvider = MockQuotesDataProvider()
         sut = RandomQuotesViewModel(data: mockDataProvider, userDefaults: mockUserDefaults)
@@ -23,6 +24,7 @@ final class RandomQuotesViewModelTests: XCTestCase {
     override func tearDown() {
         sut = nil
         mockDataProvider = nil
+        super.tearDown()
     }
     
     func test_getQuotesReturnsFallbackValue() {
@@ -66,6 +68,10 @@ final class RandomQuotesViewModelTests: XCTestCase {
         
         func fetchQuotes(count: Int, defaultValue: [String], completion: @escaping ([String]) -> Void) {
             completion(dummyValue)
+        }
+        
+        func fetchQuotes(count: Int, defaultValue: [String]) async -> [String] {
+            return dummyValue
         }
     }
 }

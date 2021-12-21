@@ -24,11 +24,12 @@ struct RandomQuoteView: View {
                     SaveQuoteView(saveQuote: dataModel.storeCurrentQuoteInFavorites)
                 }
                 
-            }.navigationTitle("Quote")
+            }
+            .navigationTitle("Quote")
             
             .toolbar {
                 Button {
-                    dataModel.getQuote()
+                    Task { await dataModel.getQuotes() }
                 } label: {
                     Label("Refresh", systemImage: "arrow.clockwise.circle.fill")
                 }.accessibilityHint("A new quote will be shown")
@@ -36,7 +37,7 @@ struct RandomQuoteView: View {
             
         }
         .onAppear {
-            dataModel.getQuote()
+            Task { await dataModel.getQuotes() }
         }
     }
 }

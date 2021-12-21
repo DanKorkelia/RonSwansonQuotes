@@ -15,18 +15,20 @@ final class RonSwansonUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         app.launch()
+        // Add launch argment to substitute network with mock data.
     }
     
-    func test_dummy() {
+    func test_basicFlow() {
         // GIVEN
         let navigationBar = app.navigationBars["Quote"]
-        let refreshButton = navigationBar.buttons["refresh"]
-        let saveQuoteButton = app.buttons["heart"]
+        let refreshButton = navigationBar.buttons["Refresh"]
+        let saveQuoteButton = app.buttons["save_quote"]
         
-        // THEN
+        // WHEN
         refreshButton.tap()
         saveQuoteButton.tap()
         
+        // THEN
         XCTAssertTrue(navigationBar.exists)
         XCTAssert(refreshButton.isHittable)
         XCTAssert(saveQuoteButton.isHittable)
