@@ -10,4 +10,5 @@ import Foundation
 
 protocol QuotesDataProvidable {
     func fetchQuotes(count: Int, defaultValue: [String], completion: @escaping ([String]) -> Void)
+    func fetchQuotes(count: Int, defaultValue: [String]) async -> [String]
 }

@@ -18,14 +18,17 @@ struct QuoteView: View {
             Text(quote)
                 .font(.title)
                 .fontWeight(.semibold)
+                .minimumScaleFactor(0.01)
                 .foregroundColor(Color(.systemBlue))
         }
         .padding()
-        .frame(minWidth: 0,
-               maxWidth: .infinity,
-               minHeight: 0,
-               maxHeight: .infinity,
+        
+        .frame(maxWidth: 350,
+               maxHeight: 350,
                alignment: .topLeading)
+        
+        .background(Color(.secondarySystemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 

@@ -30,4 +30,15 @@ final class QuotesDataProvider: QuotesDataProvidable {
             }
         }
     }
+    
+    func fetchQuotes(count: Int = 1, defaultValue: [String]) async -> [String] {
+        var url = URL("https://ron-swanson-quotes.herokuapp.com/v2/quotes")
+        url.appendPathComponent("\(count)")
+        
+        do {
+            return try await networkDataParser.fetchAsync(url)
+        } catch {
+            return defaultValue
+        }
+    }
 }

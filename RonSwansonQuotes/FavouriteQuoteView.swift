@@ -8,21 +8,19 @@
 
 import SwiftUI
 
-#warning("This is a basic outline to test how quotes can be showed from local (CoreData) or remote storage (iCloud). Currently using user defaults to show basic feature in action")
-
+/// This is a basic outline to test how quotes can be showed from local (CoreData) or remote storage (iCloud). Currently using user defaults to show basic feature in action
 struct FavouriteQuoteView: View {
+
     static let tag: String? = "Favourites"
     var existing = UserDefaults.standard.object(forKey: "FavoriteQuotes") as? [String] ?? ["You don't have any favourite quotes yet. Add some!"]
     
     var body: some View {
-        
         NavigationView {
             List {
                 ForEach(existing, id: \.self) { item in
                     Text("\(item)").padding()
                 }
             }
-            
             .navigationTitle("Favourites")
         }
     }

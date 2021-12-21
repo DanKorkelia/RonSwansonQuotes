@@ -16,6 +16,7 @@ final class DataParserTests: XCTestCase {
     override func tearDown() {
         sut = nil
         mockNetworkClient = nil
+        super.tearDown()
     }
     
     func test_parserReturnsInvalidError_whenDataIsInInvalidFormat() {
@@ -79,6 +80,10 @@ final class DataParserTests: XCTestCase {
         
         func request(_ payload: NetworkRequest, completion: @escaping (Data?, NetworkError?) -> Void) {
             completion(data, error)
+        }
+        
+        func requestAsync(_ payload: NetworkRequest) async throws -> Data {
+            return data!
         }
     }
 }

@@ -7,6 +7,5 @@
 //
 
 enum NetworkError: Int, Equatable, Error {
-    case noResponse
     case invalid
 }
