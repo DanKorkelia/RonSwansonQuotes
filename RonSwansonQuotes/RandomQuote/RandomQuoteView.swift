@@ -46,7 +46,7 @@ struct RandomQuoteView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             RandomQuoteView()
-                .environmentObject(RandomQuotesViewModel())
+                .environmentObject(RandomQuotesViewModel(data: QuotesDataProvider(), userDefaults: .standard))
                 .preferredColorScheme(.dark)
         }
     }

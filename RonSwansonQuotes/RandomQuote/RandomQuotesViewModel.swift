@@ -15,8 +15,8 @@ final class RandomQuotesViewModel: ObservableObject {
     private let userDefaults: UserDefaults
     
     init(
-        data: QuotesDataProvidable = QuotesDataProvider(),
-        userDefaults: UserDefaults = .standard
+        data: QuotesDataProvidable,
+        userDefaults: UserDefaults
     ) {
         self.data = data
         self.userDefaults = userDefaults

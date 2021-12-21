@@ -35,6 +35,6 @@ struct TabBarView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView()
-            .environmentObject(RandomQuotesViewModel())
+            .environmentObject(RandomQuotesViewModel(data: QuotesDataProvider(), userDefaults: .standard))
     }
 }

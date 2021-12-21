@@ -14,8 +14,13 @@ final class RonSwansonUITests: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
+        app.launchArguments = ["ui-tests"]
         app.launch()
-        // Add launch argment to substitute network with mock data.
+    }
+    
+    override func tearDown() {
+        app.launchArguments.removeAll()
+        super.tearDown()
     }
     
     func test_basicFlow() {

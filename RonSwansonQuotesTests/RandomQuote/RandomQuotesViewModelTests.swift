@@ -61,17 +61,4 @@ final class RandomQuotesViewModelTests: XCTestCase {
         let expectedValue = try XCTUnwrap( mockUserDefaults.object(forKey: "FavoriteQuotes") as? [String])
         XCTAssertEqual(expectedValue.first, "Dummy1")
     }
-    
-    // MARK: - Private
-    private class MockQuotesDataProvider: QuotesDataProvidable {
-        var dummyValue = [String]()
-        
-        func fetchQuotes(count: Int, defaultValue: [String], completion: @escaping ([String]) -> Void) {
-            completion(dummyValue)
-        }
-        
-        func fetchQuotes(count: Int, defaultValue: [String]) async -> [String] {
-            return dummyValue
-        }
-    }
 }

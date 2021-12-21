@@ -42,3 +42,17 @@ final class QuotesDataProvider: QuotesDataProvidable {
         }
     }
 }
+
+#if DEBUG
+final class MockQuotesDataProvider: QuotesDataProvidable {
+    var dummyValue = [String]()
+    
+    func fetchQuotes(count: Int, defaultValue: [String], completion: @escaping ([String]) -> Void) {
+        completion(dummyValue)
+    }
+    
+    func fetchQuotes(count: Int, defaultValue: [String]) async -> [String] {
+        return dummyValue
+    }
+}
+#endif

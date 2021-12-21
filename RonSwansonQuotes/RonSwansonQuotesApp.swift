@@ -10,12 +10,28 @@ import SwiftUI
 
 @main
 struct RonSwansonQuotesApp: App {
-    let dataModel = RandomQuotesViewModel()
     
+    /// Present here to swap out data provider with a mock version
+    /// that does not reach out to real network. And is used in UI Tests.
+    static let dataProvider: QuotesDataProvidable = {
+        if ProcessInfo.processInfo.arguments.contains("ui-tests") {
+            let dataProvider = MockQuotesDataProvider()
+            dataProvider.dummyValue = ["Great Test", "Massive Win"]
+            return dataProvider
+        } else {
+            return QuotesDataProvider()
+        }
+    }()
+    
+    let viewModel = RandomQuotesViewModel(
+        data: dataProvider,
+        userDefaults: .standard
+    )
+
     var body: some Scene {
         WindowGroup {
             TabBarView()
-                .environmentObject(dataModel)
+                .environmentObject(viewModel)
         }
     }
 }
