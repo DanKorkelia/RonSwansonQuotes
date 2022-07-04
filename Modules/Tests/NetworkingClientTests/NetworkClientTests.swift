@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import RonSwansonQuotes
+@testable import NetworkingClient
 
 final class NetworkClientTests: XCTestCase {
     private let testURL = URL("https://example.com")

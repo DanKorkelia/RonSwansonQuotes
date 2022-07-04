@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import NetworkingClient
 
 final class QuotesDataProvider: QuotesDataProvidable {
     private let networkDataParser: DataParserProtocol

@@ -6,6 +6,6 @@
 //  Copyright © 2020 Dan Korkelia. All rights reserved.
 //
 
-enum NetworkError: Int, Equatable, Error {
+public enum NetworkError: Int, Equatable, Error {
     case invalid
 }

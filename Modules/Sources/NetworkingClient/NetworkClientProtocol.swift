@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NetworkClientProtocol {
+public protocol NetworkClientProtocol {
     func request(_ payload: NetworkRequest, completion: @escaping (_ success: Data?, _ failure: NetworkError?) -> Void)
     func requestAsync(_ payload: NetworkRequest) async throws -> Data
 }

@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct NetworkRequest {
+public struct NetworkRequest {
     let url: URL
     let httpMethod: HttpMethod = .GET
     
-    enum HttpMethod: String, CustomStringConvertible {
+    public enum HttpMethod: String, CustomStringConvertible {
         case GET
         case POST
         
-        var description: String {
+        public var description: String {
             self.rawValue
         }
     }
