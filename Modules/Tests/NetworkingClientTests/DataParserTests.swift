@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import RonSwansonQuotes
+@testable import NetworkingClient
 
 final class DataParserTests: XCTestCase {
     private var sut: DataParser!

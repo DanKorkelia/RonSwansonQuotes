@@ -9,15 +9,15 @@
 import Foundation
 
 // MARK: - URLSession data task
-struct NetworkClient: NetworkClientProtocol {
+public struct NetworkClient: NetworkClientProtocol {
     
     private var sessionConfiguration: URLSessionConfiguration
     
-    init(configuration: URLSessionConfiguration = .default) {
+    public init(configuration: URLSessionConfiguration = .default) {
         self.sessionConfiguration = configuration
     }
     
-    func request(_ payload: NetworkRequest, completion: @escaping (_ success: Data?, _ failure: NetworkError?) -> Void) {
+    public func request(_ payload: NetworkRequest, completion: @escaping (_ success: Data?, _ failure: NetworkError?) -> Void) {
         
         let urlSession = URLSession(configuration: sessionConfiguration)
         var request = URLRequest(url: payload.url, cachePolicy: .useProtocolCachePolicy)
@@ -43,7 +43,7 @@ struct NetworkClient: NetworkClientProtocol {
         task.resume()
     }
     
-    func requestAsync(_ payload: NetworkRequest) async throws -> Data {
+    public func requestAsync(_ payload: NetworkRequest) async throws -> Data {
         let urlSession = URLSession(configuration: sessionConfiguration)
         let request = URLRequest(url: payload.url, cachePolicy: .useProtocolCachePolicy)
         let (data, response) = try await urlSession.data(for: request)

@@ -16,29 +16,27 @@ struct RandomQuoteView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                if dataModel.quote.isEmpty {
-                    EmptyView()
-                } else {
-                    QuoteView(quote: dataModel.quote)
-                    SaveQuoteView(saveQuote: dataModel.storeCurrentQuoteInFavorites)
+            List {
+                VStack {
+                    if dataModel.quote.isEmpty {
+                        EmptyView()
+                    } else {
+                        QuoteView(quote: dataModel.quote)
+                        SaveQuoteView(saveQuote: dataModel.storeCurrentQuoteInFavorites)
+                    }
+
                 }
-                
+            }
+            .refreshable {
+                await dataModel.getQuotes()
             }
             .navigationTitle("Quote")
-            
-            .toolbar {
-                Button {
-                    Task { await dataModel.getQuotes() }
-                } label: {
-                    Label("Refresh", systemImage: "arrow.clockwise.circle.fill")
-                }.accessibilityHint("A new quote will be shown")
-            }
-            
         }
+
         .onAppear {
             Task { await dataModel.getQuotes() }
         }
+
     }
 }
 

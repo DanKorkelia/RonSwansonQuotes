@@ -3,14 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58179AD925950B61002B6B6C /* DataParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58179AD825950B61002B6B6C /* DataParserTests.swift */; };
-		58179ADE25962DD4002B6B6C /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58179ADD25962DD4002B6B6C /* DataParser.swift */; };
-		58179AE325962E4B002B6B6C /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58179AE225962E4B002B6B6C /* NetworkClient.swift */; };
-		58179AE825962E6C002B6B6C /* NetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58179AE725962E6C002B6B6C /* NetworkClientProtocol.swift */; };
+		582A40562871CA2F00D904E0 /* NetworkingClient in Frameworks */ = {isa = PBXBuildFile; productRef = 582A40552871CA2F00D904E0 /* NetworkingClient */; };
 		5834E4E32563E06B003276CE /* RonSwansonQuotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E4E22563E06B003276CE /* RonSwansonQuotesApp.swift */; };
 		5834E4E52563E06B003276CE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E4E42563E06B003276CE /* TabBarView.swift */; };
 		5834E4E72563E06C003276CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5834E4E62563E06C003276CE /* Assets.xcassets */; };
@@ -18,15 +15,10 @@
 		5834E51D2563E790003276CE /* RandomQuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E51C2563E790003276CE /* RandomQuotesViewModel.swift */; };
 		5834E5252563F8C4003276CE /* RandomQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E5242563F8C4003276CE /* RandomQuoteView.swift */; };
 		5834E52A2563FFBA003276CE /* FavouriteQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E5292563FFBA003276CE /* FavouriteQuoteView.swift */; };
-		5834E53E256410B5003276CE /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E53D256410B5003276CE /* MockURLProtocol.swift */; };
-		5834E54625641200003276CE /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E54525641200003276CE /* NetworkClientTests.swift */; };
-		5834E65325647A4B003276CE /* URL+StaticString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E65225647A4B003276CE /* URL+StaticString.swift */; };
 		5834E65B256492BB003276CE /* QuotesDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834E65A256492BB003276CE /* QuotesDataProvider.swift */; };
-		587B12EE2597B1850066701C /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B12ED2597B1850066701C /* NetworkRequest.swift */; };
 		587B13052597FF400066701C /* QuotesDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B13042597FF400066701C /* QuotesDataProviderTests.swift */; };
 		58E1481A259DF855007E0D09 /* SaveQuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E14819259DF855007E0D09 /* SaveQuoteView.swift */; };
 		58E1481F259E19C1007E0D09 /* RandomQuotesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1481E259E19C1007E0D09 /* RandomQuotesViewModelTests.swift */; };
-		58E1482B259E23A8007E0D09 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58E1482A259E23A8007E0D09 /* NetworkError.swift */; };
 		58FF06AB259A7F9600A51329 /* QuotesDataProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FF06AA259A7F9600A51329 /* QuotesDataProvidable.swift */; };
 		58FF06C7259CBB1D00A51329 /* RonSwansonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FF06C6259CBB1D00A51329 /* RonSwansonUITests.swift */; };
 		58FF06CF259CBD1F00A51329 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58FF06CE259CBD1F00A51329 /* QuoteView.swift */; };
@@ -50,10 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		58179AD825950B61002B6B6C /* DataParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParserTests.swift; sourceTree = "<group>"; };
-		58179ADD25962DD4002B6B6C /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
-		58179AE225962E4B002B6B6C /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
-		58179AE725962E6C002B6B6C /* NetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientProtocol.swift; sourceTree = "<group>"; };
+		582A40532871C74500D904E0 /* Modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Modules; sourceTree = "<group>"; };
 		5834E4DF2563E06B003276CE /* RonSwansonQuotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RonSwansonQuotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5834E4E22563E06B003276CE /* RonSwansonQuotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RonSwansonQuotesApp.swift; sourceTree = "<group>"; };
 		5834E4E42563E06B003276CE /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
@@ -67,16 +56,11 @@
 		5834E51C2563E790003276CE /* RandomQuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuotesViewModel.swift; sourceTree = "<group>"; };
 		5834E5242563F8C4003276CE /* RandomQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteView.swift; sourceTree = "<group>"; };
 		5834E5292563FFBA003276CE /* FavouriteQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteQuoteView.swift; sourceTree = "<group>"; };
-		5834E53D256410B5003276CE /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
-		5834E54525641200003276CE /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
-		5834E65225647A4B003276CE /* URL+StaticString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+StaticString.swift"; sourceTree = "<group>"; };
 		5834E65A256492BB003276CE /* QuotesDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDataProvider.swift; sourceTree = "<group>"; };
-		587B12ED2597B1850066701C /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		587B13042597FF400066701C /* QuotesDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDataProviderTests.swift; sourceTree = "<group>"; };
 		58E14819259DF855007E0D09 /* SaveQuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveQuoteView.swift; sourceTree = "<group>"; };
 		58E1481E259E19C1007E0D09 /* RandomQuotesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuotesViewModelTests.swift; sourceTree = "<group>"; };
 		58E14823259E22D2007E0D09 /* RonSwansonQuotes.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = RonSwansonQuotes.xctestplan; path = RonSwansonQuotesTests/RonSwansonQuotes.xctestplan; sourceTree = SOURCE_ROOT; };
-		58E1482A259E23A8007E0D09 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		58FF06AA259A7F9600A51329 /* QuotesDataProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDataProvidable.swift; sourceTree = "<group>"; };
 		58FF06AF259B3A1D00A51329 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		58FF06C6259CBB1D00A51329 /* RonSwansonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RonSwansonUITests.swift; sourceTree = "<group>"; };
@@ -88,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582A40562871CA2F00D904E0 /* NetworkingClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,22 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58179A932593E920002B6B6C /* Helpers */ = {
+		582A40542871CA2F00D904E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5834E53D256410B5003276CE /* MockURLProtocol.swift */,
 			);
-			path = Helpers;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5834E4D62563E06B003276CE = {
 			isa = PBXGroup;
 			children = (
+				582A40532871C74500D904E0 /* Modules */,
 				58FF06AF259B3A1D00A51329 /* README.md */,
 				5834E4E12563E06B003276CE /* RonSwansonQuotes */,
 				5834E4F32563E06C003276CE /* RonSwansonQuotesTests */,
 				5834E4FE2563E06C003276CE /* RonSwansonQuotesUITests */,
 				5834E4E02563E06B003276CE /* Products */,
+				582A40542871CA2F00D904E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,8 +130,6 @@
 				5834E4E42563E06B003276CE /* TabBarView.swift */,
 				5834E5292563FFBA003276CE /* FavouriteQuoteView.swift */,
 				58FF06BB259CBA3900A51329 /* RandomQuote */,
-				587B12EC2597B1740066701C /* Networking */,
-				58FF06BA259CBA2000A51329 /* Extension */,
 				5834E4E62563E06C003276CE /* Assets.xcassets */,
 				5834E4EB2563E06C003276CE /* Info.plist */,
 				5834E4E82563E06C003276CE /* Preview Content */,
@@ -167,7 +151,6 @@
 				58E14823259E22D2007E0D09 /* RonSwansonQuotes.xctestplan */,
 				58FF06BF259CBABB00A51329 /* RandomQuote */,
 				587B13022597FF130066701C /* Networking */,
-				58179A932593E920002B6B6C /* Helpers */,
 				5834E4F62563E06C003276CE /* Info.plist */,
 			);
 			path = RonSwansonQuotesTests;
@@ -182,33 +165,11 @@
 			path = RonSwansonQuotesUITests;
 			sourceTree = "<group>";
 		};
-		587B12EC2597B1740066701C /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				58179ADD25962DD4002B6B6C /* DataParser.swift */,
-				58179AE725962E6C002B6B6C /* NetworkClientProtocol.swift */,
-				58179AE225962E4B002B6B6C /* NetworkClient.swift */,
-				58E1482A259E23A8007E0D09 /* NetworkError.swift */,
-				587B12ED2597B1850066701C /* NetworkRequest.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		587B13022597FF130066701C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				58179AD825950B61002B6B6C /* DataParserTests.swift */,
-				5834E54525641200003276CE /* NetworkClientTests.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		58FF06BA259CBA2000A51329 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				5834E65225647A4B003276CE /* URL+StaticString.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		58FF06BB259CBA3900A51329 /* RandomQuote */ = {
@@ -249,6 +210,9 @@
 			dependencies = (
 			);
 			name = RonSwansonQuotes;
+			packageProductDependencies = (
+				582A40552871CA2F00D904E0 /* NetworkingClient */,
+			);
 			productName = RonSwansonQuotes;
 			productReference = 5834E4DF2563E06B003276CE /* RonSwansonQuotes.app */;
 			productType = "com.apple.product-type.application";
@@ -368,15 +332,9 @@
 				58E1481A259DF855007E0D09 /* SaveQuoteView.swift in Sources */,
 				58FF06AB259A7F9600A51329 /* QuotesDataProvidable.swift in Sources */,
 				5834E4E52563E06B003276CE /* TabBarView.swift in Sources */,
-				58179AE325962E4B002B6B6C /* NetworkClient.swift in Sources */,
 				5834E4E32563E06B003276CE /* RonSwansonQuotesApp.swift in Sources */,
-				58179ADE25962DD4002B6B6C /* DataParser.swift in Sources */,
-				5834E65325647A4B003276CE /* URL+StaticString.swift in Sources */,
-				58E1482B259E23A8007E0D09 /* NetworkError.swift in Sources */,
 				58FF06CF259CBD1F00A51329 /* QuoteView.swift in Sources */,
-				587B12EE2597B1850066701C /* NetworkRequest.swift in Sources */,
 				5834E52A2563FFBA003276CE /* FavouriteQuoteView.swift in Sources */,
-				58179AE825962E6C002B6B6C /* NetworkClientProtocol.swift in Sources */,
 				5834E65B256492BB003276CE /* QuotesDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,11 +343,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5834E54625641200003276CE /* NetworkClientTests.swift in Sources */,
 				587B13052597FF400066701C /* QuotesDataProviderTests.swift in Sources */,
-				5834E53E256410B5003276CE /* MockURLProtocol.swift in Sources */,
 				58E1481F259E19C1007E0D09 /* RandomQuotesViewModelTests.swift in Sources */,
-				58179AD925950B61002B6B6C /* DataParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -454,7 +410,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -469,13 +424,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
@@ -525,13 +481,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -707,6 +664,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		582A40552871CA2F00D904E0 /* NetworkingClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkingClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5834E4D72563E06B003276CE /* Project object */;
 }

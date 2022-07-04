@@ -8,11 +8,11 @@
 
 import Foundation
 
-final class DataParser: DataParserProtocol {
+public final class DataParser: DataParserProtocol {
     
     private let networkClient: NetworkClientProtocol
     
-    init(networkClient: NetworkClientProtocol = NetworkClient()) {
+    public init(networkClient: NetworkClientProtocol = NetworkClient()) {
         self.networkClient = networkClient
     }
     
@@ -22,7 +22,7 @@ final class DataParser: DataParserProtocol {
     ///   - defaultValue: sets type of data to fetch as well as providing safe default for case when no data is available from endpoint.
     ///   - completion: call completion to return result
     
-    func fetch<T: Decodable>(_ url: URL, defaultValue: T, completion: @escaping (Result<T, NetworkError>) -> Void) {
+    public func fetch<T: Decodable>(_ url: URL, defaultValue: T, completion: @escaping (Result<T, NetworkError>) -> Void) {
         
         let getRequest = NetworkRequest(url: url)
         networkClient.request(getRequest) { data, error in
@@ -43,7 +43,7 @@ final class DataParser: DataParserProtocol {
         }
     }
     
-    func fetchAsync<T: Decodable>(_ url: URL) async throws -> T {
+    public func fetchAsync<T: Decodable>(_ url: URL) async throws -> T {
         let getRequest = NetworkRequest(url: url)
         let decoder = JSONDecoder()
         
@@ -56,7 +56,7 @@ final class DataParser: DataParserProtocol {
     }
 }
 
-protocol DataParserProtocol {
+public protocol DataParserProtocol {
     func fetch<T: Decodable>(_ url: URL, defaultValue: T, completion: @escaping (Result<T, NetworkError>) -> Void)
     func fetchAsync<T: Decodable>(_ url: URL) async throws -> T
 }

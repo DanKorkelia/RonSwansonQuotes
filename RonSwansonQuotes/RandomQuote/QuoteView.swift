@@ -12,23 +12,18 @@ struct QuoteView: View {
     let quote: String
     var body: some View {
         VStack(alignment: .leading) {
+            
             Text("Ron Swanson says")
                 .foregroundColor(Color(.secondaryLabel))
                 .padding(.bottom, 4)
+
             Text(quote)
                 .font(.title)
                 .fontWeight(.semibold)
                 .minimumScaleFactor(0.01)
                 .foregroundColor(Color(.systemBlue))
+            
         }
-        .padding()
-        
-        .frame(maxWidth: 350,
-               maxHeight: 350,
-               alignment: .topLeading)
-        
-        .background(Color(.secondarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12))
     }
 }
 
